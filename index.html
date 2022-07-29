@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body>
+    <div id="form">
+      <input type="text" id="hours" placeholder="hrs" />
+      <input type="text" id="minutes" placeholder="mins" />
+      <input type="text" id="seconds" placeholder="secs" />
+    </div>
+
+    <div id="counter">
+      <h2 id="hours">00</h2>
+      <h2>:</h2>
+      <h2 id="minutes">00</h2>
+      <h2>:</h2>
+      <h2 id="seconds">00</h2>
+    </div>
+
+    <div id="buttons">
+      <button id="start" onclick="start()">START</button>
+      <button id="pause" onclick="toggle(this)">PAUSE</button>
+      <button id="stop" onclick="stoper()">STOP</button>
+      <button id="restart" onclick="restart()">RESTART</button>
+    </div>
+  </body>
+</html>
