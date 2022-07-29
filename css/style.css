@@ -82,6 +82,7 @@ button:hover {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
     border-radius: 0.3rem;
+    margin-bottom: 1rem;
   }
 
   input[type="text"] {
@@ -101,5 +102,9 @@ button:hover {
   #form,
   #counter {
     width: 80%;
+  }
+
+  #buttons {
+    flex-direction: column;
   }
 }
