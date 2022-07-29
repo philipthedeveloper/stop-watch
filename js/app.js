@@ -4,6 +4,7 @@ const sD = document.querySelector("h2#seconds");
 const buttons = document.querySelectorAll("button");
 const minInput = document.querySelector("input#minutes");
 const secInput = document.querySelector("input#seconds");
+const hourInput = document.querySelector("input#hours");
 
 [minInput, secInput].forEach((input) => {
   input.addEventListener("change", function () {
@@ -17,6 +18,12 @@ const secInput = document.querySelector("input#seconds");
       this.value = "";
     }
   });
+});
+
+hourInput.addEventListener("change", function () {
+  if (isNaN(this.value)) {
+    this.value = "";
+  }
 });
 
 // COLOR SETTER
@@ -83,6 +90,11 @@ function start() {
   document.querySelector("input#minutes").value = "";
   document.querySelector("input#seconds").value = "";
 
+  //   DISABLE ALL INPUTS
+  minInput.setAttribute("disabled", "true");
+  secInput.setAttribute("disabled", "true");
+  hourInput.setAttribute("disabled", "true");
+
   // ADD THE RESULT INTO THE H2 TAGS
   display();
 
@@ -140,6 +152,9 @@ function toggle(value) {
 }
 
 function stoper() {
+  minInput.removeAttribute("disabled");
+  secInput.removeAttribute("disabled");
+  hourInput.removeAttribute("disabled");
   buttons[2].style.display = "none";
   buttons[0].style.display = "block";
   hours = 0;
